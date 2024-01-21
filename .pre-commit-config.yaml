@@ -1,18 +1,9 @@
 repos:
   - repo: local
     hooks:
-    - id: requirements2
-      name: requirements2
+    - id: requirements
+      name: requirements
       entry: bash -c 'pip freeze > requirements.txt; git add requirements.txt'
       language: system
       pass_filenames: false
       stages: [commit]
-
-# - repo: local
-  # hooks:  # <- this was missing
-  # - id: pytest
-    # name: Run tests (pytest)
-    # entry: pytest -x
-    # language: system
-    # types: [python]
-    # pass_filenames: false
